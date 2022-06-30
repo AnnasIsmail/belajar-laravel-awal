@@ -2,6 +2,10 @@ body{
     background-color: #272727;
 }
 
+.navbar-collapse{
+    flex-grow: 0 !important;
+}
+
 .main-login{
     padding-top: 100px;
     max-width: 500px;
