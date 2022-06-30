@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Account;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,74 +39,6 @@ Route::get('/profile', function () {
     return view('profile' , ['title'=> 'Profile']);
 });
 
-Route::get('/my-community', function () {
-    
-    $account = [
-        [
-            "RiotId"=> "Forgotten",
-            "Tagline"=> "MLG",
-            "Rank"=> "Silver 1",
-            "Username"=> "kolangxkaling",
-            "Password"=> "asuna321",
-        ],
-        [
-            "RiotId"=> "JOKOWIJAGOAN",
-            "Tagline"=> "Pasar",
-            "Rank"=> "Unranked",
-            "Username"=> "annas2111",
-            "Password"=> "Annas211112345",
-        ],
-        [
-            "RiotId"=> "JOKOWIJAGOAN",
-            "Tagline"=> "WIBU",
-            "Rank"=> "Unranked",
-            "Username"=> "annas2110",
-            "Password"=> "Annas211012345",
-        ],
-    ];
+Route::get('/my-community', [AccountController::class, 'index']); 
 
-    return view('my-community' , [
-        'title'=> 'My Community',
-        'account' => $account
-    ]);
-
-});
-
-Route::get('update-account{slug}', function ($slug) {
-
-    $account = [
-        [
-            "RiotId"=> "Forgotten",
-            "Tagline"=> "MLG",
-            "Rank"=> "Silver 1",
-            "Username"=> "kolangxkaling",
-            "Password"=> "asuna321",
-        ],
-        [
-            "RiotId"=> "JOKOWIJAGOAN",
-            "Tagline"=> "Pasar",
-            "Rank"=> "Unranked",
-            "Username"=> "annas2111",
-            "Password"=> "Annas211112345",
-        ],
-        [
-            "RiotId"=> "JOKOWIJAGOAN",
-            "Tagline"=> "WIBU",
-            "Rank"=> "Unranked",
-            "Username"=> "annas2110",
-            "Password"=> "Annas211012345",
-        ],
-    ];
-
-    $dataAccount = [];
-    foreach($account as $data){
-        if($data["Username"] == $slug){
-            $dataAccount = $data;
-        }
-    }
-
-    return view('update-account' , [
-        'title'=> 'Update Account',
-        'data'=> $dataAccount,
-    ]);
-});
+Route::get('update-account{slug}', [AccountController::class, 'show']);
