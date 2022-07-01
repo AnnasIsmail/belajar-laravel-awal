@@ -14,10 +14,10 @@ class AccountController extends Controller
         ]);
     }
 
-    public function show($slug){
+    public function show(Account $account){
         return view('update-account' , [
             'title'=> 'Update Account',
-            'data'=> Account::find($slug)
+            'data'=> $account
         ]);
     }
 }

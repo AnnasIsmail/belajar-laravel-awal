@@ -41,4 +41,4 @@ Route::get('/profile', function () {
 
 Route::get('/my-community', [AccountController::class, 'index']); 
 
-Route::get('update-account{slug}', [AccountController::class, 'show']);
+Route::get('update-account{account:slug}', [AccountController::class, 'show']);

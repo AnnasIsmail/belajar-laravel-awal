@@ -12,7 +12,6 @@ class Account
             "Username"=> "kolangxkaling",
             "Password"=> "asuna321",
         ],
- 
         [
             "RiotId"=> "JOKOWIJAGOAN",
             "Tagline"=> "Pasar",

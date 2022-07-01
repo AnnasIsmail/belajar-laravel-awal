@@ -6,7 +6,7 @@
   @foreach ($account as $data)
   <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">{{ $data->RiotId }}#{{ $data->Tagline }} <a href="/update-account{{ $data->id }}"><ion-icon data-bs-toggle="tooltip" title="Edit Account" name="create-outline"></ion-icon></a> </h5>
+        <h5 class="card-title">{{ $data->RiotId }}#{{ $data->Tagline }} <a href="/update-account{{ $data->slug }}"><ion-icon data-bs-toggle="tooltip" title="Edit Account" name="create-outline"></ion-icon></a> </h5>
         <p class="card-text">Rank: <b>{{ $data->Rank }}</b> </p>
       </div>
       <ul class="list-group list-group-flush">
