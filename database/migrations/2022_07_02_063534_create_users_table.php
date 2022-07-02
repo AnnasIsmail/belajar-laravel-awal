@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('accounts', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('RiotId');
+            $table->string('FirstName');
+            $table->string('LastName');
             $table->string('Slug');
-            $table->string('Tagline');
-            $table->string('Rank');
             $table->string('Username');
+            $table->string('Email');
             $table->string('Password');
             $table->timestamps();
         });
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('accounts');
+        Schema::dropIfExists('communities');
     }
 };
