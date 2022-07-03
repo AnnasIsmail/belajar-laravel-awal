@@ -223,8 +223,14 @@ ion-icon {
 
 .list-group-item-community{
     gap: 10px !important;
-    justify-content: start !important;
+    justify-content: space-between !important;
     align-items: center;
+    cursor: pointer;
+}
+
+.list-group-item-community:hover{
+    background-color: #212529;
+    color: #fff;
 }
 
 .list-group-item-community img{
@@ -234,8 +240,20 @@ ion-icon {
     object-fit: cover;
 }
 
-.list-group-item-community div{
+.list-group-item-community .left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-group-item-community .name-and-status{
     display: grid;
+}
+
+.list-group-item-community .role{
+    border-radius: 50px;
+    padding: 0px 10px;
+    color: white;
 }
 
 .list-group-item-community div span{
@@ -250,4 +268,11 @@ ion-icon {
 
 .community{
     max-width: 400px;
+}
+
+
+
+.community img{
+    max-height: 200px;
+    object-fit: cover;
 }

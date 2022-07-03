@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('Username');
             $table->string('Email');
             $table->string('Password');
+            $table->string('UrlImage');
             $table->timestamps();
         });
     }

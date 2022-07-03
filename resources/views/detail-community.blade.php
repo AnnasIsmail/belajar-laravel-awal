@@ -2,7 +2,9 @@
 
 @section('container')
 <header class="header-my-community">
-  <a href="community"><button type="button" class="btn btn-outline-primary">< <span class="hide-responsive" >Back My Commnunity</span></button></a>
+  <a href="community">
+    <button type="button" class="btn btn-primary" id="addNewData"><ion-icon name="add-circle"></ion-icon> <span class="hide-responsive" >Add New Account</span></button>
+  </a>
 
   <div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="Search Account" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -26,7 +28,20 @@
     <p class="card-text">{{ $community->Description }}</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item list-group-item-community"><img src="https://i.pinimg.com/736x/76/6f/b8/766fb8a7764dc9f24f052f17fd95578f.jpg" alt=""><div><b>Felisa K</b><span><ion-icon name="ellipse"></ion-icon>Online</span></div></li>
+    @foreach ($member as $data)
+    
+      <li class="list-group-item list-group-item-community">
+        <div class="left">
+          <img src="{{ $data->Users->UrlImage }}" alt="">
+          <div class="name-and-status">
+            <b>{{ $data->Users->FirstName }} {{ $data->Users->LastName }}</b><span>
+            <ion-icon name="ellipse"></ion-icon>Online</span>
+          </div> 
+        </div>
+        <button type="button" class="btn btn-primary role" disabled>{{ $data->Role }}</button>
+      </li>
+        
+    @endforeach
   </ul>
   <div class="card-body">
     <a href="{{ $community->LinkDiscord }}" target="_blank" class="card-link">Link Discord</a>

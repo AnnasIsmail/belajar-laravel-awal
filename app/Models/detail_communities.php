@@ -11,7 +11,6 @@ class detail_communities extends Model
 
     protected $guarded = ["id"];
 
-
     public function Users(){
         return $this->belongsTo(Users::class);
     }

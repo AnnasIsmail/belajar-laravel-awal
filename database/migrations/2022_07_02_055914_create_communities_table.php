@@ -15,8 +15,11 @@ return new class extends Migration
     {
         Schema::create('communities', function (Blueprint $table) {
             $table->id();
+            $table->string('LinkDiscord');
             $table->string('Name');
             $table->string('Slug');
+            $table->string('UrlImage');
+            $table->string('Description');
             $table->timestamps();
         });
     }

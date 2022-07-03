@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('detail_communities', function (Blueprint $table) {
             $table->id();
             $table->foreignId('users_id');
+            $table->string('Role');
             $table->foreignId('communities_id');
             $table->timestamps();
         });
