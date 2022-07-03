@@ -247,3 +247,7 @@ ion-icon {
 .list-group-item-community div span ion-icon{
     color: green;
 }
+
+.community{
+    max-width: 400px;
+}

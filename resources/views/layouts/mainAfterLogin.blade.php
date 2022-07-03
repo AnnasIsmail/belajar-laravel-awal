@@ -19,7 +19,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link {{ ($title === 'My Community')? 'active' : '' }}"href="/my-community">My Community</a>
+                <a class="nav-link {{ ($title === 'Community')? 'active' : '' }}"href="/community">Community</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {{ ($title === 'Profile')? 'active' : '' }}" href="/profile">Profile</a>

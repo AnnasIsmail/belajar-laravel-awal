@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\CommunitiesController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Account;
 
@@ -39,6 +40,8 @@ Route::get('/profile', function () {
     return view('profile' , ['title'=> 'Profile']);
 });
 
-Route::get('/my-community', [AccountController::class, 'index']); 
+Route::get('/community', [CommunitiesController::class, 'index']); 
 
-Route::get('update-account{account:slug}', [AccountController::class, 'show']);
+Route::get('/detail-community{communities:Slug}', [CommunitiesController::class, 'communityDetail']); 
+
+Route::get('update-account{account:Slug}', [AccountController::class, 'show']); 
