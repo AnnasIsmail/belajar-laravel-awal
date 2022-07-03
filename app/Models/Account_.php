@@ -41,6 +41,12 @@ class Account
         //         $account_return = $data;
         //     }
         // }
+
         return $account->firstWhere('Username', $slug) ;
     }
+
+        public function Communities(){
+            return $this->belongsTo(Communities::class);
+        }
+
 }

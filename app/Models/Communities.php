@@ -9,6 +9,14 @@ class Communities extends Model
 {
     use HasFactory;
 
+    public function Account(){
+        return $this->hasMany(Account::class);
+    }
+
+    public function detail_communities(){
+        return $this->hasMany(detail_communities::class);
+    }
+
     protected $guarded = ["id"];
 
 }

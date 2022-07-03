@@ -9,6 +9,10 @@ class Users extends Model
 {
     use HasFactory;
 
+    public function detail_communities(){
+        return $this->hasMany(detail_communities::class);
+    }
+
     protected $guarded = ["id"];
 
 }
