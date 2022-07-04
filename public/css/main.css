@@ -205,12 +205,13 @@ ion-icon {
     justify-content: space-between;
 }
 
-#liveToastBtn{
+.header-my-community .btn{
     display: flex;
     gap: 5px;
     align-items: center;
 }
-#liveToastBtn ion-icon{
+
+.header-my-community ion-icon{
     width: 23px;
     height: 23px;
 }

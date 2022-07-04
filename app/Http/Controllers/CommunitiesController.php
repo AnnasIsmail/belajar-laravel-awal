@@ -20,7 +20,7 @@ class CommunitiesController extends Controller
             'title'=> 'Detail Community',
             'community' => $communities,
             'account' => $communities->account,
-            'member' => $communities->detail_communities
+            'member' => $communities->detail_communities->load('Users'),
         ]);
     }
 
