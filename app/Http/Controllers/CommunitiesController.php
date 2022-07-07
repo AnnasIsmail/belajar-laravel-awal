@@ -23,5 +23,4 @@ class CommunitiesController extends Controller
             'member' => $communities->detail_communities->load('Users'),
         ]);
     }
-    
 }
