@@ -24,4 +24,3 @@ class CommunitiesController extends Controller
         ]);
     }
 }
-
