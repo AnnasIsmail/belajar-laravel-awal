@@ -6,10 +6,10 @@
     <button type="button" class="btn btn-primary" id="addNewData"><ion-icon name="add-circle"></ion-icon> <span class="hide-responsive" >Add New Account</span></button>
   </a>
 
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Search Account" aria-label="Recipient's username" aria-describedby="button-addon2">
-    <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
-  </div>
+  <form class="input-group mb-3" action="/detail-community{{ $community->Slug }}" >
+    <input type="text" class="form-control" placeholder="Search Account" name="search" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button class="btn btn-primary" type="submit" id="button-addon2">Search</button>
+  </form>
 
   <a>
     <button type="button" class="btn btn-primary" id="liveToastBtn"><ion-icon size="small" name="people"></ion-icon> <span class="hide-responsive" >Show Member Community</span></button>
